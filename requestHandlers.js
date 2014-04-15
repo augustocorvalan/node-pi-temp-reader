@@ -5,10 +5,6 @@ function start(response) {
 	renderWebRoot("/html/index.html", response);	
 }
 
-function update(response) {
-	console.log("Request handler update was called");
-}
-
 function renderWebRoot(pathname, response) {
 	fs.readFile("./webroot" + pathname, function (error, content) {
 		if (error) {
@@ -37,5 +33,4 @@ function getHeadersByFileExtension(extension) {
 }
 
 exports.start = start;
-exports.update = update;
 exports.renderWebRoot = renderWebRoot;

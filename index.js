@@ -6,7 +6,6 @@ var requestHandlers = require("./requestHandlers.js");
 var handle = {};
 handle["/"] = requestHandlers.start;
 handle["/start"] = requestHandlers.start;
-handle["/update"] = requestHandlers.update;
 handle.webRoot = requestHandlers.renderWebRoot;
 
 server.start(router.route, handle);
